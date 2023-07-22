@@ -6,12 +6,12 @@
  */
 int handle_string(char *stg)
 {
-	int i = 0;
+int i = 0;
 
 	if (stg == NULL)
 	{
 		handle_string("(null)");
-		return (1);
+		return (6);
 	}
 	while (stg[i])
 	{
