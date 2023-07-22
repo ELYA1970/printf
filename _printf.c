@@ -6,22 +6,29 @@
  */
 int _printf(const char *format, ...)
 {
-	va_list args;
 	int count = 0;
-
-	if (!format)
-		return (-1);
+	va_list args;
 
 	va_start(args, format);
+	if (!format || !format[0])
+		return (-1);
 	while (*format)
 	{
 		if (*format == '%')
 		{
 			format++;
 			if (*format == 'c')
-				count += _putchar(va_arg(args, int));
+			{
+				char c = va_arg(args, int);
+
+				count += _putchar(c);
+			}
 			else if (*format == 's')
-				count += handle_string(va_arg(args, char *));
+			{
+				char *stg = va_arg(args, char *);
+
+				count += handle_string(stg);
+			}
 			else if (*format == '%')
 			{
 				_putchar('%');
@@ -29,12 +36,22 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				_putchar(*format);
+				_putchar('%');
 				count++;
+				if (*format)
+				{
+					_putchar(*format);
+					count++;
+				}
 			}
+			format++;
 		}
-		format++;
+		else
+		{
+			_putchar(*format);
+			count++;
+			format++;
+		}
 	}
-	va_end(args);
 	return (count);
 }
