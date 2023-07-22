@@ -1,35 +1,5 @@
 #include "main.h"
 /**
- * _putchar - print a character
- * @c: character
- * Return: integerlike a character in code ASCII
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-/**
- *handle_string - return how many characters we want to print in a string
- *@stg: string
- *Return: an integer
- */
-int handle_string(char *stg)
-{
-	int i = 0;
-
-	if (stg == NULL)
-	{
-		handle_string("(null)");
-		return (1);
-	}
-	while (stg[i])
-	{
-		_putchar(stg[i]);
-		i++;
-	}
-	return (i);
-}
-/**
  * _printf - produces output according to a format
  * @format: character string
  * Return: number of characters printed
