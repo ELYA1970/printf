@@ -26,6 +26,8 @@ int _printf(const char *format, ...)
 				_putchar('%');
 				count++;
 			}
+			else if (*format == 'd' || *format == 'i')
+				count += handle_number(va_arg(args, int));
 			else
 			{
 				_putchar('%');
