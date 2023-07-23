@@ -22,5 +22,7 @@ typedef struct print
 int _printf(const char *format, ...);
 int _putchar(char c);
 int handle_string(char *stg);
+int handle_num(int number);
+int length(int number);
 
 #endif
