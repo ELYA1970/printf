@@ -23,7 +23,7 @@ int handle_number(int number)
 	if (number < 0)
 	{
 		likay7seb++;
-		putchar('-');
+		_putchar('-');
 		number = -number;
 	}
 	likay7seb += length(number);
@@ -34,7 +34,7 @@ int handle_number(int number)
 	}
 	else
 	{
-		putchar(number + '0');
+		_putchar(number + '0');
 	}
 	return (likay7seb);
 }
