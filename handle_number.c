@@ -21,21 +21,23 @@ int handle_number(long int number)
 	int str = 0;
 
 
-    if (number < 0)
+	if (number < 0)
 	{
-    str++;
-        _putchar('-'); 
-        number = -number; 
-    }
+		str++;
+		_putchar('-');
+		number = -number;
+	}
 
-    str += length(number);
+	str += length(number);
 
-    if (number >= 10) {
-        handle_number(number / 10);
-        handle_number(number % 10);
-    } else {
-        _putchar(number + '0');
-    }
-    return (str);
+	if (number >= 10)
+	{
+		handle_number(number / 10);
+		handle_number(number % 10);
+	} else
+	{
+		_putchar(number + '0');
+	}
+	return (str);
 
-}	
+}

@@ -28,7 +28,6 @@ int _printf(const char *format, ...)
 			}
 			else if (*format == 'd' || *format == 'i')
 				count += handle_number(va_arg(args, int));
-				
 			else
 			{
 				_putchar('%');
@@ -38,8 +37,7 @@ int _printf(const char *format, ...)
 					_putchar(*format);
 					count++;
 				}
-			}
-			format++;
+			} format++;
 		}
 		else
 		{
@@ -47,6 +45,5 @@ int _printf(const char *format, ...)
 			count++;
 			format++;
 		}
-	}
-	return (count);
-	}
+	} return (count);
+}
