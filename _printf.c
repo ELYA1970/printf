@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdarg.h>
 /**
  * _printf - produces output according to a format specifier
  * @format: character string
@@ -19,7 +18,7 @@ int _printf(const char *format, ...)
 		{
 			format++;
 			if (*format == 'c')
-				count += _putchar(va_arg(args,  long int));
+				count += _putchar(va_arg(args, long int));
 			else if (*format == 's')
 				count += handle_string(va_arg(args, char*));
 			else if (*format == '%')
@@ -28,7 +27,8 @@ int _printf(const char *format, ...)
 				count++;
 			}
 			else if (*format == 'd' || *format == 'i')
-				count += handle_number(va_arg(args, long  int));
+				count += handle_number(va_arg(args,long  int));
+				
 			else
 			{
 				_putchar('%');
@@ -47,5 +47,6 @@ int _printf(const char *format, ...)
 			count++;
 			format++;
 		}
-		return (count);
+	}
+	return (count);
 	}
