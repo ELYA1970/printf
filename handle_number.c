@@ -24,7 +24,7 @@ int handle_number(long int number)
     if (number < 0)
 	{
     str++;
-        putchar('-'); 
+        _putchar('-'); 
         number = -number; 
     }
 
@@ -34,25 +34,8 @@ int handle_number(long int number)
         handle_number(number / 10);
         handle_number(number % 10);
     } else {
-        putchar(number + '0');
+        _putchar(number + '0');
     }
     return (str);
 
-	if (number < 0)
-	{
-		likay7seb++;
-		_putchar('-');
-		number = -number;
-	}
-	likay7seb += length(number);
-	if (number >= 10)
-	{
-		handle_number(number / 10);
-		handle_number(number % 10);
-	}
-	else
-	{
-		_putchar(number + '0');
-	}
-	return (likay7seb);
-}
+}	
