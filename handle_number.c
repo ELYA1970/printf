@@ -20,19 +20,21 @@ int handle_number(int number)
 {
 	int likay7seb = 0;
 
-    if (number < 0) {
-        likay7seb++;
-        putchar('-'); 
-        number = -number; 
-    }
-
-    likay7seb += length(number);
-
-    if (number >= 10) {
-        handle_number(number / 10);
-        handle_number(number % 10);
-    } else {
-        putchar(number + '0');
-    }
-    return likay7seb;
+	if (number < 0)
+	{
+		likay7seb++;
+		putchar('-');
+		number = -number;
+	}
+	likay7seb += length(number);
+	if (number >= 10)
+	{
+		handle_number(number / 10);
+		handle_number(number % 10);
+	}
+	else
+	{
+		putchar(number + '0');
+	}
+	return (likay7seb);
 }
