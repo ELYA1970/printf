@@ -16,17 +16,18 @@ int length(int number)
  * @number: an integer
  * Return: an integer printed
  */
-int handle_number(int number)
+int handle_number(long int number)
 {
-	int likay7seb = 0;
+	int str = 0;
 
-    if (number < 0) {
-        likay7seb++;
+    if (number < 0)
+	{
+    str++;
         putchar('-'); 
         number = -number; 
     }
 
-    likay7seb += length(number);
+    str += length(number);
 
     if (number >= 10) {
         handle_number(number / 10);
@@ -34,5 +35,5 @@ int handle_number(int number)
     } else {
         putchar(number + '0');
     }
-    return likay7seb;
+    return (str);
 }

@@ -5,7 +5,7 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <unistd.h>
-
+#include <limits.h>
 /**
  * struct _print - struct for printer functions
  * @type_args: identifier
@@ -22,7 +22,7 @@ typedef struct print
 int _printf(const char *format, ...);
 int _putchar(char c);
 int handle_string(char *stg);
-int handle_number(int number);
+int handle_number( long int number);
 int length(int number);
 
 #endif
