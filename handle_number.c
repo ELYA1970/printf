@@ -19,7 +19,11 @@ int length(int number)
 int handle_number(long int number)
 {
 	int str = 0;
-
+	if (number == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
 
 	if (number < 0)
 	{
