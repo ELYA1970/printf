@@ -20,6 +20,7 @@ int handle_number(long int number)
 {
 	int str = 0;
 
+
     if (number < 0)
 	{
     str++;
@@ -36,4 +37,22 @@ int handle_number(long int number)
         putchar(number + '0');
     }
     return (str);
+
+	if (number < 0)
+	{
+		likay7seb++;
+		_putchar('-');
+		number = -number;
+	}
+	likay7seb += length(number);
+	if (number >= 10)
+	{
+		handle_number(number / 10);
+		handle_number(number % 10);
+	}
+	else
+	{
+		_putchar(number + '0');
+	}
+	return (likay7seb);
 }
